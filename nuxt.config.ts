@@ -12,13 +12,6 @@ export default defineNuxtConfig({
   turnstile: {
     siteKey: "0x4AAAAAAAUBxBNAPgRBo5hj",
   },
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: "https://cms.mihai.ltd/graphql",
-      },
-    },
-  },
   app: {
     head: {
       title: "Milind Ranjan Portfolio",
@@ -31,15 +24,15 @@ export default defineNuxtConfig({
         {
           hid: "description",
           name: "description",
-          content: "Mihai's portfolio website showcasing Milind’s work",
+          content: "Milind's portfolio website showcasing Milind’s work",
         },
         {
+      
           name: "keywords",
           content: "portfolio, website, developer, programmer",
         },
       ],
       link: [
-        // Add the web font stylesheet link here
         {
           rel: 'stylesheet',
           href: 'https://db.onlinewebfonts.com/c/58af16514d95c0d78284e9f275ee75ae?family=ES+Build+TRIAL' // Replace with the actual URL of your web font

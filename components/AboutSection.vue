@@ -1,39 +1,43 @@
 <template>
-    <section id="about" class="about-me">
-      <h1>About Me _______________ <span class="underline"></span></h1>
-      <div class="info-cards">
-        <div class="card">
-          <i class="fas fa-briefcase" color=#050401></i>
-          <h4>Interests</h4>
-          <p>Tenorflow Development</p>
-          <p>Android Development</p>
-          <p>Artificial Intelligence</p>
-          <p>Space and Cosmos</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-graduation-cap" color=#050401></i>
-          <h4>Education</h4>
-          <p>BTech Computer Science</p>
-          <p>Cyber Physical System</p>
-        </div>
+  <section id="about" class="about-me">
+    <h1>About Me _______________ <span class="underline"></span></h1>
+    <div class="info-cards">
+      <div class="card">
+        <i class="fas fa-briefcase"></i>
+        <h4>Interests</h4>
+        <ul class="interests-list">
+          <li>Deep Learning & AI</li>
+          <li>Android Development</li>
+          <li>Competitive Programming</li>
+          <li>Space and Cosmos</li>
+        </ul>
       </div>
-      <p class="description">
+      <div class="card">
+        <i class="fas fa-graduation-cap"></i>
+        <h4>Education</h4>
+        <ul class="education-list">
+          <li>BTech CSE - VIT Chennai</li>
+          <li>Deep Learning - Udemy</li>
+          <li>Android Development - Udemy</li>
+        </ul>
+      </div>
+    </div>
+    <p class="description">
       I’m Milind Ranjan, a passionate Software Developer with a deep interest in crafting innovative solutions that solve real-world problems. My journey in tech began with a fascination for coding and a drive to continuously learn and evolve in this ever-changing field. With experience in various programming languages and frameworks, I specialize in Android development and Deep Learning. My background includes developing user-friendly web and mobile applications and working on deep learning projects, showcasing my versatility and commitment to technology.
     </p>
     <p class="hobbies-description">
       When I’m not coding, you’ll find me indulging in my hobbies such as singing, exploring space and science, or participating in events that foster creativity and innovation. I’m excited to leverage my skills to build meaningful projects and contribute to impactful solutions.
     </p>
-    </section>
-  </template>
-  
-  <script>
-  export default {
-    name: 'AboutSection'
-  }
-  </script>
-  
-  <style scoped>
+  </section>
+</template>
 
+<script>
+export default {
+  name: 'AboutSection'
+}
+</script>
+
+<style scoped>
 .card i {
   font-size: 1.5rem; /* Adjust icon size */
   color: #050401; /* Change icon color */
@@ -60,7 +64,6 @@
 
 .info-cards {
   display: flex;
-  justify-content: space-around;
   margin-top: 5rem; /* Add margin-top to increase space above the cards */
   margin-bottom: 5rem; /* Existing margin */
 }
@@ -72,13 +75,21 @@
   padding: 1rem; /* Padding inside the card */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
   text-align: center;
-  
-
+  margin: 0 1rem;
 }
+
 .card h4 {
   color: #333; /* Dark color for the heading */
   font-size: 1.5rem;
 }
+
+.interests-list, .education-list {
+  list-style-type: disc; /* Use bullet points */
+  padding-left: 20px; /* Indent list */
+  text-align: left; /* Align text to the left */
+  margin-top: 0.5rem;
+}
+
 .card p {
   margin: 0.2rem 0; /* Add some spacing for paragraphs */
   color: #515151;
@@ -100,11 +111,10 @@
   .card {
     width: 75%; /* Increase width on mobile for better visibility */
     margin-bottom: 5rem;
-    
   }
 
-    .about-me {
-      padding: 0 1rem; /* Reduce padding on smaller screens */
-    }
+  .about-me {
+    padding: 0 1rem; /* Reduce padding on smaller screens */
   }
-  </style>
+}
+</style>
