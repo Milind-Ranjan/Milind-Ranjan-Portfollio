@@ -1,6 +1,6 @@
 <template>
   <section id="projects" class="projects">
-    <h2>Projects_______________</h2>
+    <h2>Projects</h2>
     <div class="project-cards">
       <div class="project-card" v-for="(project, index) in projects" :key="index">
         <!-- Replace the image with an SVG icon -->
@@ -31,28 +31,28 @@ export default {
       projects: [
         { 
           name: 'TIC TAC TOE', 
-          description: 'This Android app features Tic Tac Toe with offline and online modes. Play locally or connect online using unique game IDs. It includes Firebase integration for real-time chat and game state management.', 
+          description: 'Tic Tac Toe game with offline and online modes. Connect online using unique game IDs.', 
           icon: '/icons/tictactoe.jpeg', // Replace with your project SVG icon path
           techStack: ['Kotlin', 'Android Studio', 'Firebase'], 
           githubLink: 'https://github.com/Milind-Ranjan/TicTacToe.git' // Add your GitHub link
         },
         { 
           name: 'Bitcoin Predictor', 
-          description: 'BitPredictor is a machine learning project that uses TensorFlow and LSTM to predict Bitcoin prices from historical data, aiding traders and investors in decision-making.', 
+          description: 'BitPredictor is a machine learning project that uses TensorFlow and LSTM to predict Bitcoin prices from historical data.', 
           icon: '/icons/bitcoin.webp', // Replace with your project SVG icon path
           techStack: ['Python','Tensorflow','Matplotlib','Deep Learning'],
           githubLink: 'https://github.com/Milind-Ranjan/BitPredictor.git' // Add your GitHub link
         },
         { 
           name: 'Automated Guitar Tuner', 
-          description: 'An Arduino-based project that uses a stepper motor and FFT analysis to automatically tune a guitar. The system captures and analyzes the guitar string’s frequency, adjusts the tuning peg, and ensures each string is tuned.', 
+          description: 'An Arduino-based project that uses a stepper motor and FFT analysis to automatically tune a guitar.', 
           icon: '/icons/guitar.svg', // Replace with your project SVG icon path
           techStack: ['Arduino','C++','Micro controller', 'Stepper Motor'],
           githubLink: 'https://github.com/Milind-Ranjan/Automated-Guitar-Tuner.git' // Add your GitHub link
         },
         { 
           name: 'MusicApp UI', 
-          description: 'MusicApp-UI is a modern Android app featuring a clean, intuitive interface built with Jetpack Compose. Designed as a UI-only project, it allows users to browse, play music, and manage playlists seamlessly.', 
+          description: 'MusicApp-UI is a Designed as a UI-only Android app featuring a clean, intuitive interface built with Jetpack Compose. ', 
           icon: '/icons/music.svg', // Replace with your project SVG icon path
           techStack: ['Kotlin','Android Studio','Jetpack Compose','UI'],
           githubLink: 'https://github.com/Milind-Ranjan/MusicApp-UI.git' // Add your GitHub link
@@ -88,7 +88,7 @@ export default {
 }
 
 .project-card {
-  flex: 0 0 calc(40% - 1rem); /* Two cards in a row */
+  flex: 0 0 calc(50% - 1rem); /* Two cards in a row */
   margin-bottom: 1rem; /* Space below cards */
   background-color: #f9f9f9;
   border: 2px solid black;

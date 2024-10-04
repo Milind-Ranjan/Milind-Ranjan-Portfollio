@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="about-me">
-    <h1>About Me _______________ <span class="underline"></span></h1>
+    <h1>About Me<span class="underline"></span></h1>
     <div class="info-cards">
       <div class="card">
         <i class="fas fa-briefcase"></i>
@@ -16,7 +16,7 @@
         <i class="fas fa-graduation-cap"></i>
         <h4>Education</h4>
         <ul class="education-list">
-          <li>BTech CSE - VIT Chennai</li>
+          <li>BTech CSE - VIT</li>
           <li>Deep Learning - Udemy</li>
           <li>Android Development - Udemy</li>
         </ul>

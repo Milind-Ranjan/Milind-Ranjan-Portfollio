@@ -1,6 +1,6 @@
 <template>
     <section id="skills" class="skills">
-      <h1>Technical Skills _________</h1>
+      <h1>Technical Skills</h1>
       <div class="skills-cards">
   <div class="skills-cards">
   <!-- Programming Languages Card -->
@@ -13,7 +13,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">C++</p>
-    <p class="expertise-level">Expert</p>
   </div>
 </div>
 
@@ -21,7 +20,6 @@
       <span class="skill-icon"><i class="fab fa-python"></i></span>
       <div class="skill-details">
         <p class="skill-name">Python</p>
-        <p class="expertise-level">Expert</p>
       </div>
     </div>
 
@@ -29,7 +27,6 @@
       <span class="skill-icon"><i class="fab fa-java"></i></span>
       <div class="skill-details">
         <p class="skill-name">Java</p>
-        <p class="expertise-level">Intermediate</p>
       </div>
     </div>
 
@@ -39,7 +36,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">Kotlin</p>
-    <p class="expertise-level">Expert</p>
   </div>
 </div>
 
@@ -47,7 +43,6 @@
       <span class="skill-icon"><i class="fab fa-html5"></i></span>
       <div class="skill-details">
         <p class="skill-name">HTML</p>
-        <p class="expertise-level">Expert</p>
       </div>
     </div>
 
@@ -55,7 +50,6 @@
       <span class="skill-icon"><i class="fab fa-css3-alt"></i></span>
       <div class="skill-details">
         <p class="skill-name">CSS</p>
-        <p class="expertise-level">Expert</p>
       </div>
     </div>
 
@@ -63,7 +57,6 @@
       <span class="skill-icon"><i class="fab fa-js"></i></span>
       <div class="skill-details">
         <p class="skill-name">JavaScript</p>
-        <p class="expertise-level">Intermediate</p>
       </div>
     </div>
 
@@ -71,7 +64,6 @@
       <span class="skill-icon"><i class="fab fa-git-alt"></i></span>
       <div class="skill-details">
         <p class="skill-name">Git</p>
-        <p class="expertise-level">Intermediate</p>
       </div>
     </div>
   </div>
@@ -88,7 +80,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">NumPy</p>
-    <p class="expertise-level">Expert</p>
   </div>
 </div>
 
@@ -96,7 +87,6 @@
       <span class="skill-icon"><i class="fas fa-chart-bar"></i></span>
       <div class="skill-details">
         <p class="skill-name">Matplotlib</p>
-        <p class="expertise-level">Expert</p>
       </div>
     </div>
 
@@ -104,7 +94,6 @@
       <span class="skill-icon"><i class="fas fa-chart-pie"></i></span>
       <div class="skill-details">
         <p class="skill-name">Seaborn</p>
-        <p class="expertise-level">Intermediate</p>
       </div>
     </div>
 
@@ -114,7 +103,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">Keras</p>
-    <p class="expertise-level">Expert</p>
   </div>
 </div>
 
@@ -124,7 +112,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">Tensorflow</p>
-    <p class="expertise-level">Expert</p>
   </div>
 </div>
 
@@ -134,7 +121,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">OpenCV</p>
-    <p class="expertise-level">Expert</p>
   </div>
 </div>
     </div>
@@ -148,7 +134,6 @@
         <span class="skill-icon"><i class="fab fa-android"></i></span>
         <div class="skill-details">
           <p class="skill-name">Android</p>
-          <p class="expertise-level">Expert</p>
         </div>
       </div>
 
@@ -159,7 +144,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">Jetpack Compose</p>
-    <p class="expertise-level">Expert</p>
   </div>
 </div>
 
@@ -169,7 +153,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">AWS</p>
-    <p class="expertise-level">Intermediate</p>
   </div>
 </div>
 <div class="skill-item">
@@ -178,7 +161,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">Firebase</p>
-    <p class="expertise-level">Expert</p>
   </div>
 </div>
 
@@ -188,7 +170,6 @@
   </span>
   <div class="skill-details">
     <p class="skill-name">Azure</p>
-    <p class="expertise-level">Intermediate</p>
   </div>
 </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="contact">
-    <h1>Contact me _______________</h1>
+    <h1>Contact me</h1>
     <div class="contact-links">
       <a href="mailto:milindranjan1511@gmail.com" class="btn1">
         <i class="fas fa-envelope"></i> Email
