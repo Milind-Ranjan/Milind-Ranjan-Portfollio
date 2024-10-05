@@ -262,14 +262,23 @@
 /* Media queries for mobile screens */
 @media (max-width: 768px) {
   .skills-card {
-    width: auto; /* Full width for each skills card */
-    margin-bottom: 0.2rem; /* Adjust spacing */
+    width: 100%; /* Full width for each skills card */
+    margin-bottom: 1rem;
+    display: flex; /* Keep as flex for wrapping */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Adjust spacing */
+  }
+  .skills-cards {
+    width: 100%; /* Full width for each skills card */
+    margin-bottom: 1rem;
+    display: flex; /* Keep as flex for wrapping */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Adjust spacing */
   }
 
   .skill-group {
     display: flex; /* Keep as flex for wrapping */
-    flex-direction: column; /* Stack items vertically */
-    align-items: stretch; /* Ensure items stretch to full width */
+    flex-direction: column; /* Stack items vertically */ /* Ensure items stretch to full width */
   }
 
   .skill-item {
