@@ -5,21 +5,21 @@
           <a
             href="#about"
             class="nav-link"
-            @click.prevent="scrollToSection('home')"
+            @click.prevent="scrollToSection('about')"
           >About</a>
         </li>
         <li>
           <a
             href="#skills"
             class="nav-link"
-            @click.prevent="scrollToSection('projects')"
+            @click.prevent="scrollToSection('skills')"
           >Skills</a>
         </li>
         <li>
           <a
             href="#projects"
             class="nav-link"
-            @click.prevent="scrollToSection('blog')"
+            @click.prevent="scrollToSection('projects')"
           >Projects</a>
         </li>
         <li>
