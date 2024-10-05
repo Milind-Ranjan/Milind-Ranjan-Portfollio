@@ -9,7 +9,7 @@
   <div class="skill-group">
     <div class="skill-item">
   <span class="skill-icon">
-    <img src="/public/icons/cpp.svg" alt="C++ Icon" class="cpp-icon">
+    <img src="/public/icons/cpp.svg" alt="C++ Icon" class="kotlin-icon">
   </span>
   <div class="skill-details">
     <p class="skill-name">C++</p>
@@ -76,7 +76,7 @@
     <div class="skill-group">
       <div class="skill-item">
   <span class="skill-icon">
-    <img src="/public/icons/numpy.svg" alt="numpy Icon" class="cpp-icon">
+    <img src="/public/icons/numpy.svg" alt="numpy Icon" class="kotlin-icon">
   </span>
   <div class="skill-details">
     <p class="skill-name">NumPy</p>
@@ -108,7 +108,7 @@
 
     <div class="skill-item">
   <span class="skill-icon">
-    <img src="/public/icons/tensorflow.svg" alt="tf Icon" class="tf-icon">
+    <img src="/public/icons/tensorflow.svg" alt="tf Icon" class="kotlin-icon">
   </span>
   <div class="skill-details">
     <p class="skill-name">Tensorflow</p>
@@ -186,47 +186,52 @@
   }
   </script>
 <style scooped>
-.skills {
-  padding: 0 1rem; /* Reduce padding on smaller screens */
-}
+
 .skills {
   padding: 0 1rem; /* Add equal padding on left and right */
-  max-width: 1200px; /* Optional: limit the max width to prevent it from being too wide on larger screens */
+  max-width: 1200px; /* Limit the max width to prevent being too wide */
   margin: 0 auto; /* Center align the section */
 }
+
 .skills h1 {
   position: relative;
   text-align: left;
   margin-top: 5rem;
   font-size: 2.3rem;
-  margin-bottom: 5rem; /* Remove bottom margin to prevent space between heading and underscore */
+  margin-bottom: 5rem; /* Space between heading and underscore */
 }
+
 .skills-card {
-  width: 29%; /* Decrease the width to make cards smaller */
+  width: 30%; /* Card width for desktop */
   border: 2px solid black; /* Black border */
-  border-radius: 40px; /* Increase this value for more rounded corners */
+  border-radius: 40px; /* Rounded corners */
   padding: 1rem; /* Padding inside the card */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
   text-align: center;
-  justify-content: space-between; /* Spread cards evenly */
-  gap: 1rem;
-  width: 30%;
+  display: flex;
+  flex-direction: column; /* Align card content vertically */
+  justify-content: flex-start; /* Ensure the content starts from the top */
+  height: 100%; /* Make card take full height */
+  margin-bottom: 4rem; /* Space below the card itself */
 }
-.skills-card h3{
+
+.skills-card h3 {
   color: #050401; /* Dark color for the heading */
   font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem; /* Reduced space below h3 */
 }
+
 .skill-group {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-grow: 1; /* Allow skill items to grow to fill available space */
 }
 
 .skill-item {
   display: flex;
   align-items: center;
-  width: 48%;
+  width: 48%; /* Adjust width for desktop */
   margin-bottom: 1.5rem;
 }
 
@@ -235,30 +240,6 @@
   margin-right: 1rem;
   display: inline-block;
   color: black; /* Ensures the container behaves like an icon */
-}
-
-.cpp-icon {
-  width: 1.3rem; /* Match the font-size of the icon */
-  height: auto; /* Maintain the aspect ratio of the SVG */
-  vertical-align: left; /* Align the icon with the text */
-  margin-right: 0.02rem; 
-  color: black;/* Same as the original Font Awesome icon margin */
-}
-.kotlin-icon {
-  width: 1.5rem; /* Match the font-size of the icon */
-  height: auto; /* Maintain the aspect ratio of the SVG */
-  vertical-align: left;/* Align the icon with the text */
-  margin-right: 0.02rem;
-  color: black;/* Same as the original Font Awesome icon margin */
-   /* Same as the original Font Awesome icon margin */
-}
-.tf-icon {
-  width: 1.5rem; /* Match the font-size of the icon */
-  height: auto; /* Maintain the aspect ratio of the SVG */
-  vertical-align: left;/* Align the icon with the text */
-  margin-right: 0.005rem;
-  color: black;/* Same as the original Font Awesome icon margin */
-   /* Same as the original Font Awesome icon margin */
 }
 
 .skill-details {
@@ -271,21 +252,55 @@
   color: #050401;
 }
 
+.kotlin-icon {
+  width: 1.5rem; /* Match the font-size of the icon */
+  height: auto; /* Maintain the aspect ratio of the SVG */
+  vertical-align: left;/* Align the icon with the text */
+  margin-right: 0.02rem;
+  color: black;/* Same as the original Font Awesome icon margin */
+}
+
 .expertise-level {
   font-size: 1rem;
   color: gray;
 }
+
+/* Media queries for mobile screens */
 @media (max-width: 768px) {
-  .skills-cards {
-    flex-direction: column; /* Stack the cards vertically */
-    gap: 1rem;
-    flex-direction: column;
+  .skill-group {
+    flex-direction: column; /* Stack the items vertically */
     align-items: center;
+    justify-content: flex-start; /* Align content at the top */
   }
 
   .skills-card {
-    width: 75%; /* Full width for mobile view */
-    margin-bottom: 5rem;
+    width: 100%; /* Full width for mobile view */
+    margin-bottom: 3rem; /* Space below the card */
+    padding: 1rem; /* Adjust padding for mobile */
+    height: auto; /* Allow height to adjust for mobile */
+  }
+
+  .skills-card h3 {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    margin-bottom: 0.5rem; /* Less space below h3 */
+  }
+
+  .skill-item {
+    width: 100%; /* Make each skill item take full width */
+    margin-bottom: 1rem; /* Adjust spacing for mobile */
+  }
+
+  .skill-icon {
+    font-size: 1.2rem; /* Adjust icon size for mobile */
+    margin-right: 0.5rem;
+  }
+
+  .skill-name {
+    font-size: 1rem; /* Smaller font for skill name */
+  }
+
+  .expertise-level {
+    font-size: 0.9rem; /* Smaller font for expertise level */
   }
 }
 </style>
