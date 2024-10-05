@@ -259,20 +259,17 @@
   color: black;/* Same as the original Font Awesome icon margin */
 }
 
-.expertise-level {
-  font-size: 1rem;
-  color: gray;
-}
-
 /* Media queries for mobile screens */
 @media (max-width: 768px) {
   .skills-card {
-    width: 100%; /* Full width for each skills card */
-    margin-bottom: 1rem; /* Adjust spacing */
+    width: auto; /* Full width for each skills card */
+    margin-bottom: 0.2rem; /* Adjust spacing */
   }
 
   .skill-group {
-    display: block; /* Stack items vertically on mobile */
+    display: flex; /* Keep as flex for wrapping */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Ensure items stretch to full width */
   }
 
   .skill-item {
@@ -282,11 +279,11 @@
 
   .skill-icon {
     font-size: 1.2rem;
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* Adjust margin for mobile */
   }
 
   .skill-name {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller font size on mobile */
   }
 }
 </style>

@@ -65,7 +65,7 @@ export default {
 .info-cards {
   display: flex;
   margin-top: 5rem; /* Add margin-top to increase space above the cards */
-  margin-bottom: 4.5rem; /* Existing margin */
+  margin-bottom: 5rem; /* Existing margin */
 }
 
 .card {
@@ -110,7 +110,7 @@ export default {
 
   .card {
     width: 75%; /* Increase width on mobile for better visibility */
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 
   .about-me {
