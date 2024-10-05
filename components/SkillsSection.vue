@@ -71,7 +71,7 @@
 
   <!-- Tools Framework Card -->
   <div class="skills-card">
-    <h3>Tools and frameworks</h3>
+    <h3>Tools and Frameworks</h3>
     <div class="skill-group">
       <div class="skill-item">
   <span class="skill-icon">
@@ -127,7 +127,7 @@
 
   <!-- Mobile Development Card -->
   <div class="skills-card">
-    <h3>Cloud and others</h3>
+    <h3>Cloud and Others</h3>
     <div class="skill-group">
       <div class="skill-item">
         <span class="skill-icon"><i class="fab fa-android"></i></span>
@@ -194,7 +194,6 @@
 
 .skills h1 {
   text-align: left;
-  margin-top: 5rem;
   font-size: 2.3rem;
   margin-bottom: 5rem;
 }

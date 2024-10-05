@@ -3,7 +3,7 @@
     <h1>About Me<span class="underline"></span></h1>
     <div class="info-cards">
       <div class="card">
-        <i class="fas fa-briefcase"></i>
+        <i class="fas fa-star"></i>
         <h4>Interests</h4>
         <ul class="interests-list">
           <li>Deep Learning & AI</li>
@@ -50,7 +50,8 @@ export default {
 .hobbies-description {
   margin-top: 2rem; /* Add spacing above the hobbies description */
   font-size: 1.1rem; /* Optional: keep it the same size as the previous description */
-  line-height: 1.6; /* Maintain line height for readability */
+  line-height: 1.6;
+  margin-bottom: 5rem; /* Maintain line height for readability */
 }
 
 .about-me h1 {
