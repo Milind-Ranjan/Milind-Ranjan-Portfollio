@@ -1,7 +1,6 @@
 <template>
     <section id="skills" class="skills">
       <h1>Technical Skills</h1>
-      <div class="skills-cards">
   <div class="skills-cards">
   <!-- Programming Languages Card -->
 <div class="skills-card">
@@ -175,7 +174,6 @@
     </div>
   </div>
 </div>
-      </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </section>
   </template>
@@ -189,39 +187,37 @@
 
 .skills {
   padding: 0 1rem; /* Add equal padding on left and right */
-  max-width: 1200px; /* Limit the max width to prevent being too wide */
+  max-width: 1200px; /* Limit the max width */
   margin: 0 auto; /* Center align the section */
-  overflow: hidden; /* Hide any overflow content */
+  overflow: hidden; /* Hide overflow */
 }
 
 .skills h1 {
-  position: relative;
   text-align: left;
   margin-top: 5rem;
   font-size: 2.3rem;
-  margin-bottom: 5rem; /* Space between heading and underscore */
+  margin-bottom: 5rem;
 }
 
 .skill-group {
   display: flex;
-  flex-wrap: wrap; /* Allow the skill cards to wrap */
+  flex-wrap: wrap;
   justify-content: space-between; /* Space between cards */
 }
 
 .skills-card {
   flex: 0 0 calc(33.33% - 1rem); /* Three cards in a row on larger screens */
-  border: 2px solid black; /* Black border */
-  border-radius: 40px; /* Rounded corners */
-  padding: 1rem; /* Padding inside the card */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  border: 2px solid black;
+  border-radius: 40px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 2rem; /* Space below the card itself */
+  margin-bottom: 2rem;
 }
 
 .skills-card h3 {
-  color: #050401; /* Dark color for the heading */
   font-size: 1.4rem;
-  margin-bottom: 1rem; /* Reduced space below h3 */
+  margin-bottom: 1rem;
 }
 
 .skill-group {
@@ -270,40 +266,27 @@
 
 /* Media queries for mobile screens */
 @media (max-width: 768px) {
-  .skill-group {
-    flex-direction: column; /* Stack the items vertically */
-    align-items: center;
-    justify-content: flex-start; /* Align content at the top */
-  }
-
   .skills-card {
-    width: 100%; /* Full width for mobile view */
-    margin-bottom: 3rem; /* Space below the card */
-    padding: 1rem; /* Adjust padding for mobile */
-    height: auto; /* Allow height to adjust for mobile */
+    width: 100%; /* Full width for each skills card */
+    margin-bottom: 1rem; /* Adjust spacing */
   }
 
-  .skills-card h3 {
-    font-size: 1.2rem; /* Smaller font size for mobile */
-    margin-bottom: 0.5rem; /* Less space below h3 */
+  .skill-group {
+    display: block; /* Stack items vertically on mobile */
   }
 
   .skill-item {
-    width: 100%; /* Make each skill item take full width */
-    margin-bottom: 1rem; /* Adjust spacing for mobile */
+    width: 100%; /* Full width for skill items */
+    margin-bottom: 1rem; /* Add space between items */
   }
 
   .skill-icon {
-    font-size: 1.2rem; /* Adjust icon size for mobile */
+    font-size: 1.2rem;
     margin-right: 0.5rem;
   }
 
   .skill-name {
-    font-size: 1rem; /* Smaller font for skill name */
-  }
-
-  .expertise-level {
-    font-size: 0.9rem; /* Smaller font for expertise level */
+    font-size: 1rem;
   }
 }
 </style>
