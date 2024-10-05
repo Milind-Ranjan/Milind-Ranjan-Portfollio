@@ -23,11 +23,9 @@
       </div>
     </div>
     <p class="description">
-      I’m Milind Ranjan, a passionate Software Developer with a deep interest in crafting innovative solutions that solve real-world problems. My journey in tech began with a fascination for coding and a drive to continuously learn and evolve in this ever-changing field. With experience in various programming languages and frameworks, I specialize in Android development and Deep Learning. My background includes developing user-friendly web and mobile applications and working on deep learning projects, showcasing my versatility and commitment to technology.
-    </p>
+  I&#39;m Milind Ranjan, a passionate Software Developer with a deep interest in crafting innovative solutions that solve real-world problems. My journey in tech began with a fascination for coding and a drive to continuously learn and evolve in this ever-changing field. With experience in various programming languages and frameworks, I specialize in Android development and Deep Learning. My background includes developing user-friendly web and mobile applications and working on deep learning projects, showcasing my versatility and commitment to technology.</p>
     <p class="hobbies-description">
-      When I’m not coding, you’ll find me indulging in my hobbies such as singing, exploring space and science, or participating in events that foster creativity and innovation. I’m excited to leverage my skills to build meaningful projects and contribute to impactful solutions.
-    </p>
+    When I&#39;m not coding, you&#39;ll find me indulging in my hobbies such as singing, exploring space and science, or participating in events that foster creativity and innovation. I&#39;m excited to leverage my skills to build meaningful projects and contribute to impactful solutions.    </p>
   </section>
 </template>
 
