@@ -32,6 +32,7 @@ export default {
   position: relative;
   width: 100%;
   bottom: 0;
+  margin-top: 3rem;
 }
 
 .footer-content {

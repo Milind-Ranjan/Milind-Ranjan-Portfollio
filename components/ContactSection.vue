@@ -50,7 +50,7 @@
   cursor: pointer;
   display: inline-block;
   transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
 .btn1 .button-link {

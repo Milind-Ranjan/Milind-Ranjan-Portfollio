@@ -127,6 +127,10 @@ export default {
   justify-content: center;
 }
 
+.tech-stack h4{
+  margin-bottom: 0.5rem;
+}
+
 .btn {
   text-align: center;
   padding: 0.5rem 1rem;
@@ -135,6 +139,7 @@ export default {
   color: white;
   border-radius: 20px;
   cursor: pointer;
+  margin-top: 1rem;
   margin-right: 0.5rem; /* Space between buttons */
   text-decoration: none;
 }
