@@ -31,7 +31,7 @@ export default {
       projects: [
         { 
           name: 'TIC TAC TOE', 
-          description: 'Tic Tac Toe game with offline and online modes. Connect online using unique game IDs.', 
+          description: 'Tic Tac Toe game with offline and online modes using unique game IDs. It includes Firebase integration for real-time chat and game state management.', 
           icon: '/icons/tictactoe.jpeg', // Replace with your project SVG icon path
           techStack: ['Kotlin', 'Android Studio', 'Firebase'], 
           githubLink: 'https://github.com/Milind-Ranjan/TicTacToe.git' // Add your GitHub link
@@ -45,7 +45,7 @@ export default {
         },
         { 
           name: 'Automated Guitar Tuner', 
-          description: 'An Arduino-based project that uses a stepper motor and FFT analysis to automatically tune a guitar.', 
+          description: 'An Arduino-based project that uses a stepper motor and FFT analysis to automatically tune a guitar. It captures string frequencies and adjusts tuning pegs to tune.', 
           icon: '/icons/guitar.svg', // Replace with your project SVG icon path
           techStack: ['Arduino','C++','Micro controller', 'Stepper Motor'],
           githubLink: 'https://github.com/Milind-Ranjan/Automated-Guitar-Tuner.git' // Add your GitHub link
@@ -103,7 +103,7 @@ export default {
   max-width: 50%; /* Ensure the image fits within the card */
   height: auto; /* Maintain aspect ratio */
   border: 2px solid black;
-  border-radius: 80px;
+  border-radius: 50px;
   margin: 0 auto 1rem; /* Center the image and add space below */
 }
 
