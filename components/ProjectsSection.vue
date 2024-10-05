@@ -95,26 +95,25 @@ export default {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   border-radius: 40px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1rem;
   height: 100%; /* Ensure the card takes the full available height */
   position: relative;
+  text-align: center; /* Optional: If you want all content centered */
 }
 
 .project-card img {
-  max-width: 100%; /* Ensure the image fits within the card */
-  height: 350px; /* Maintain aspect ratio */
+  max-width: 50%; /* Ensure the image fits within the card */
+  height: auto; /* Maintain aspect ratio */
   border: 2px solid black;
   border-radius: 80px;
-  margin-bottom: 1rem; /* Space between image and text */
+  margin: 0 auto 1rem; /* Center the image and add space below */
 }
 
-.project-card h3 {
-  margin: 0.5rem 0; /* Space above and below the heading */
+.project-card h3 { /* Space above and below the heading */
   color: #515151;
+  align-self: center;
   font-size: 1.5rem;
 }
 
@@ -127,7 +126,7 @@ export default {
 }
 
 .project-links {
-  margin-top: 1rem; /* Add space above the button */
+  margin-top: 0.25rem; /* Add space above the button */
   display: flex;
   justify-content: center;
 }
@@ -154,6 +153,7 @@ export default {
 .tech-stack ul {
   list-style: none;
   padding: 0;
+  text-align: left;
   display: flex; 
   flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
   gap: 0.5rem; /* Space between tech stack items */
@@ -161,7 +161,8 @@ export default {
 
 .tech-stack li {
   margin: 0; /* Remove vertical margins */
-  margin-top: 3%;
+  margin-top: 1%;
+  text-align: left;
   padding: 0.2rem 0.5rem; /* Add padding around items */
   background-color: #e3dfdf; /* Background color for tech stack items */
   border-radius: 5px; /* Rounded corners for each tech item */
