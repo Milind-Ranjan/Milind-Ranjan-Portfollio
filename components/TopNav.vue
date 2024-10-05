@@ -58,8 +58,7 @@
 nav {
   background-color: yourColor; /* Replace with your specific color */
   border-radius: 0 0 15px 15px; /* Rounded corners at the bottom */
-  padding: 0;
-  position: fixed; /* Remove any padding */
+  padding: 0; /* Remove any padding */
 }
   .nav-item {
   margin: 0; /* Remove margin to get items closer together */
