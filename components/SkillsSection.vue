@@ -191,6 +191,7 @@
   padding: 0 1rem; /* Add equal padding on left and right */
   max-width: 1200px; /* Limit the max width to prevent being too wide */
   margin: 0 auto; /* Center align the section */
+  overflow: hidden; /* Hide any overflow content */
 }
 
 .skills h1 {
@@ -201,24 +202,26 @@
   margin-bottom: 5rem; /* Space between heading and underscore */
 }
 
+.skill-group {
+  display: flex;
+  flex-wrap: wrap; /* Allow the skill cards to wrap */
+  justify-content: space-between; /* Space between cards */
+}
+
 .skills-card {
-  width: 30%; /* Card width for desktop */
+  flex: 0 0 calc(33.33% - 1rem); /* Three cards in a row on larger screens */
   border: 2px solid black; /* Black border */
   border-radius: 40px; /* Rounded corners */
   padding: 1rem; /* Padding inside the card */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
   text-align: center;
-  display: flex;
-  flex-direction: column; /* Align card content vertically */
-  justify-content: flex-start; /* Ensure the content starts from the top */
-  height: 100%; /* Make card take full height */
-  margin-bottom: 4rem; /* Space below the card itself */
+  margin-bottom: 2rem; /* Space below the card itself */
 }
 
 .skills-card h3 {
   color: #050401; /* Dark color for the heading */
   font-size: 1.4rem;
-  margin-bottom: 1.5rem; /* Reduced space below h3 */
+  margin-bottom: 1rem; /* Reduced space below h3 */
 }
 
 .skill-group {
