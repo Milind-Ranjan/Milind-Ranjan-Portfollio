@@ -1,7 +1,7 @@
 <template>
     <header class="header">
       <div class="header-content">
-        <h3>Hello, I'm</h3>
+        <h3>Hello, I&#39;m</h3>
         <h1>Milind Ranjan</h1>
         <h2>Computer Science student</h2>
         <div class="buttons">
