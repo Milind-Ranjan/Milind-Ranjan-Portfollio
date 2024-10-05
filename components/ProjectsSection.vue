@@ -65,31 +65,28 @@ export default {
 
 <style scoped>
 .projects {
-  padding: 0 1rem; /* Reduce padding on smaller screens */
-}
-.projects{
   padding: 0 1rem; /* Add equal padding on left and right */
-  max-width: 1200px; /* Optional: limit the max width to prevent it from being too wide on larger screens */
+  max-width: 1200px; /* Limit the max width to prevent it from being too wide */
   margin: 0 auto; /* Center align the section */
 }
+
 .projects h2 {
   position: relative;
   text-align: left;
   margin-top: 5rem;
   font-size: 2.3rem;
-  margin-bottom: 5rem; /* Remove bottom margin to prevent space between heading and underscore */
+  margin-bottom: 5rem; /* Space between heading and content */
 }
 
 .project-cards {
-  display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling */
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between; /* Space between cards */
   padding: 1rem 0; /* Optional padding for aesthetics */
-  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 .project-card {
-  flex: 0 0 calc(50% - 1rem); /* Two cards in a row */
-  margin-bottom: 1rem; /* Space below cards */
+  flex: 0 0 calc(50% - 1rem); /* Two cards in a row with some margin */
   background-color: #f9f9f9;
   border: 2px solid black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -99,8 +96,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   height: 100%; /* Ensure the card takes the full available height */
-  position: relative;
-  text-align: center; /* Optional: If you want all content centered */
+  margin-bottom: 2rem; /* Space below each card */
 }
 
 .project-card img {
@@ -111,18 +107,18 @@ export default {
   margin: 0 auto 1rem; /* Center the image and add space below */
 }
 
-.project-card h3 { /* Space above and below the heading */
+.project-card h3 {
   color: #515151;
   align-self: center;
   font-size: 1.5rem;
+  margin: 0.5rem 0; /* Space above and below the heading */
 }
 
 .project-card p {
   margin: 0.5rem 0; /* Space above and below the description */
-  flex-grow: 1; /* Allow description to take up available space */
   line-height: 1.5; /* Improve readability of the text */
   text-align: left;
-  overflow: hidden;
+  flex-grow: 1; /* Allow description to take up available space */
 }
 
 .project-links {
@@ -142,9 +138,11 @@ export default {
   margin-right: 0.5rem; /* Space between buttons */
   text-decoration: none;
 }
+
 .btn:hover {
   background-color: #515151; /* Darker color on hover */
 }
+
 .tech-stack {
   margin-top: 0.5rem;
   text-align: left;
@@ -161,14 +159,19 @@ export default {
 
 .tech-stack li {
   margin: 0; /* Remove vertical margins */
-  margin-top: 1%;
   text-align: left;
   padding: 0.2rem 0.5rem; /* Add padding around items */
   background-color: #e3dfdf; /* Background color for tech stack items */
   border-radius: 5px; /* Rounded corners for each tech item */
 }
 
-@media (max-width: 768px) { /* Adjust for mobile devices */
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 100%; /* Make cards full width on mobile */
+    margin-bottom: 1.5rem; /* Space between stacked cards */
+  }
+  
   .tech-stack ul {
     justify-content: center; /* Center align the items */
   }
