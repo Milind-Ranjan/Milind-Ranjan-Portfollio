@@ -27,7 +27,7 @@ export default {
 .footer {
   background-color: #050401;
   color: #fffaff;
-  padding: 2rem;
+  padding: 1rem;
   text-align: left; /* Align text to the left */
   position: relative;
   width: 100%;
@@ -67,6 +67,6 @@ export default {
 }
 
 .social-icons a:hover img {
-  filter: brightness(1.2); /* Brighten icons on hover */
+  filter: brightness(2.5); /* Brighten icons on hover */
 }
 </style>

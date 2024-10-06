@@ -56,9 +56,9 @@
   <style scoped>
 
 nav {
-  background-color: yourColor; /* Replace with your specific color */
-  border-radius: 0 0 15px 15px; /* Rounded corners at the bottom */
+  background-color: #fffaff; /* Replace with your specific color */
   padding: 0; /* Remove any padding */
+  
 }
   .nav-item {
   margin: 0; /* Remove margin to get items closer together */
