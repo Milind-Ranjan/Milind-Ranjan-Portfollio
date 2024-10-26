@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full h-16" style="background-color: #050401;">
+  <nav class="w-full h-12" style="background-color: #050401;">
     <ul class="flex h-full items-center justify-around font-bold text-white">
         <li>
           <a
