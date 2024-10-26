@@ -43,7 +43,7 @@
 }
 
 .header h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
   color: #050401;
 }
