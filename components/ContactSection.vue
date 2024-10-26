@@ -30,8 +30,8 @@
 
 .contact h1 {
   position: relative;
-  text-align: left;
-  font-size: 2.3rem;
+  text-align: center;
+  font-size: 4rem;
   margin-bottom: 5rem; /* Remove bottom margin to prevent space between heading and underscore */
 }
 .contact-links {
