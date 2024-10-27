@@ -31,7 +31,7 @@
 
     <div class="skill-item">
   <span class="skill-icon">
-    <img src="/public/icons/kotlin.svg" alt="kotlin Icon" class="kotlin-icon">
+    <img src="/public/icons/kotlin.svg" alt="kotlin Icon" class="kotlins-icon">
   </span>
   <div class="skill-details">
     <p class="skill-name">Kotlin</p>
@@ -252,6 +252,13 @@
 
 .kotlin-icon {
   width: 1.5rem; /* Match the font-size of the icon */
+  height: auto; /* Maintain the aspect ratio of the SVG */
+  vertical-align: left;/* Align the icon with the text */
+  margin-right: 0.02rem;
+  color: black;/* Same as the original Font Awesome icon margin */
+}
+.kotlins-icon {
+  width: 1.15rem; /* Match the font-size of the icon */
   height: auto; /* Maintain the aspect ratio of the SVG */
   vertical-align: left;/* Align the icon with the text */
   margin-right: 0.02rem;
