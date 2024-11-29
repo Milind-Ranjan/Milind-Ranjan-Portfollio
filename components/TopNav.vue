@@ -177,8 +177,7 @@ const handleMobileClick = (sectionId) => {
 
 @media (max-width: 768px) {
   .nav-container {
-    background-color: transparent;
-    box-shadow: none;
+    background-color: #FFFAFF; /* Changed from transparent to #FFFAFF */
   }
 
   .desktop-menu {
