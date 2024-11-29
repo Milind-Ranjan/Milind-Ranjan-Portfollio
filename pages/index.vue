@@ -1,5 +1,6 @@
 <template>
   <div>
+    <ParticleBackground />
     <HeaderSection data-aos="fade-up" />
     <AboutSection data-aos="fade-right" />
     <SkillsSection data-aos="fade-left" />
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import ParticleBackground from '~/components/ParticleBackground.vue'
 import HeaderSection from '~/components/HeaderSection.vue'
 import AboutSection from '~/components/AboutSection.vue'
 import SkillsSection from '~/components/SkillsSection.vue'

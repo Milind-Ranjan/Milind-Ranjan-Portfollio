@@ -250,6 +250,7 @@
   color: #050401;
 }
 
+
 .kotlin-icon {
   width: 1.5rem; /* Match the font-size of the icon */
   height: auto; /* Maintain the aspect ratio of the SVG */
@@ -264,7 +265,10 @@
   margin-right: 0.02rem;
   color: black;/* Same as the original Font Awesome icon margin */
 }
-
+.skill-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
 /* Media queries for mobile screens */
 @media (max-width: 768px) {
   .skills-card {
