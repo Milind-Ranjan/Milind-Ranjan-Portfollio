@@ -3,7 +3,7 @@
       <div class="header-content">
         <h3>Hello, I&#39;m</h3>
         <h1>Milind Ranjan</h1>
-        <h2>A Computer Science Student</h2>
+        <h2>A Computer Science Student wow</h2>
         <div class="buttons">
           <button class="btn1">
             <a href="https://github.com/Milind-Ranjan" target="_blank" class="button-link">
