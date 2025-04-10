@@ -26,7 +26,7 @@ export default defineNuxtConfig({
         {
           hid: "description",
           name: "description",
-          content: "Milind's portfolio website showcasing Milind’s work",
+          content: "Milind's portfolio website showcasing Milind's work",
         },
         {
           name: "keywords",
@@ -35,8 +35,17 @@ export default defineNuxtConfig({
       ],
       link: [
         {
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "",
+        },
+        {
           rel: "stylesheet",
-          href: "https://db.onlinewebfonts.com/c/58af16514d95c0d78284e9f275ee75ae?family=ES+Build+TRIAL",
+          href: "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap",
         },
       ],
     },

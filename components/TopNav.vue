@@ -1,15 +1,19 @@
 <template>
   <nav class="nav-container" :class="{ 'nav-open': isMenuOpen }">
     <!-- Desktop Menu -->
-    <ul class="desktop-menu">
-      <li v-for="item in menuItems" :key="item">
-        <a :href="`#${item.toLowerCase()}`" 
-           class="nav-link" 
-           @click.prevent="scrollToSection(item.toLowerCase())">
-          {{ item }}
-        </a>
-      </li>
-    </ul>
+    <div class="nav-content">
+      <div class="nav-spacer"></div>
+      <ul class="desktop-menu">
+        <li v-for="item in menuItems" :key="item">
+          <a :href="`#${item.toLowerCase()}`" 
+             class="nav-link" 
+             @click.prevent="scrollToSection(item.toLowerCase())">
+            {{ item }}
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="resume-button">Resume <span class="download-icon">↓</span></a>
+    </div>
 
     <!-- Mobile Menu Button -->
     <button class="mobile-menu-btn" @click="toggleMenu" aria-label="Toggle menu">
@@ -67,34 +71,91 @@ const handleMobileClick = (sectionId) => {
 
 <style scoped>
 .nav-container {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 3rem;
-  background-color: #050401;
-  z-index: 1000;
+  height: 5rem;
+  background-color: transparent;
+  z-index: 1050;
+  backdrop-filter: blur(8px);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+}
+
+.nav-spacer {
+  width: 100px;
 }
 
 .desktop-menu {
   display: flex;
-  height: 100%;
   align-items: center;
-  justify-content: space-around;
-  padding: 0 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 3rem;
 }
 
 .nav-link {
-  color: #fffaff;
-  transition: color 0.3s;
-  padding: 0.5rem 1rem;
+  color: #000000;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.resume-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
 }
 
-.nav-link:hover {
-  color: #b1b1b1;
+.resume-button:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+}
+
+.download-icon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.resume-button:hover .download-icon {
+  transform: translateY(2px);
 }
 
 /* Mobile Menu Button */
@@ -177,48 +238,51 @@ const handleMobileClick = (sectionId) => {
 
 @media (max-width: 768px) {
   .nav-container {
-    background-color: #FFFAFF; /* Changed from transparent to #FFFAFF */
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 4.5rem;
+  }
+
+  .nav-content {
+    padding: 0 1.5rem;
+  }
+
+  .nav-spacer {
+    display: none;
   }
 
   .desktop-menu {
     display: none;
   }
 
-  .mobile-menu-btn {
-    display: block;
-    padding: 1rem;
-    background-color: transparent;
-  }
-
-  .hamburger span {
-    background-color: #050401;
-    height: 3px;
-    border-radius: 2px;
-  }
-
-  .hamburger.active span {
-    background-color: #050401;
+  .resume-button {
+    display: none;
   }
 
   .mobile-menu {
-    display: block;
-    background-color: rgba(255, 250, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
   }
 
   .mobile-menu .nav-link {
-    color: #050401;
-    font-size: 1.5rem;
-    padding: 0.75rem 2rem;
+    color: #000000;
     font-weight: 600;
+    font-size: 1.4rem;
   }
 
-  .mobile-menu .nav-link:active {
-    background-color: rgba(0, 0, 0, 0.05);
+  .mobile-menu ul {
+    gap: 2rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
   }
 }
 
 :deep(section[id]) {
-  scroll-margin-top: 3rem;
+  scroll-margin-top: 5rem;
 }
 </style>
