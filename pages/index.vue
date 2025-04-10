@@ -2,8 +2,9 @@
   <div>
     <ParticleBackground />
     <HeaderSection data-aos="fade-up" />
-    <AboutSection data-aos="fade-right" />
     <SkillsSection data-aos="fade-left" />
+    <ExperienceSection data-aos="fade-right" />
+    <AboutSection data-aos="fade-right" />
     <ProjectsSection data-aos="fade-right" />
     <ContactSection data-aos="fade-up" />
   </div>
@@ -16,6 +17,7 @@ import AboutSection from '~/components/AboutSection.vue'
 import SkillsSection from '~/components/SkillsSection.vue'
 import ProjectsSection from '~/components/ProjectsSection.vue'
 import ContactSection from '~/components/ContactSection.vue'
+import ExperienceSection from '~/components/ExperienceSection.vue'
 import AOS from 'aos'
 
 export default {
@@ -25,7 +27,8 @@ export default {
     AboutSection,
     SkillsSection,
     ProjectsSection,
-    ContactSection
+    ContactSection,
+    ExperienceSection
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)

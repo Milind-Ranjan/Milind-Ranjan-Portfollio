@@ -36,13 +36,13 @@ export default {
 
 <style scoped>
 .header {
-  padding: 10rem 2rem 8rem;
+  padding: 6rem 2rem 8rem;
   background-color: #fffaff;
   color: #000;
   overflow: hidden;
   font-family: 'Sora', sans-serif;
   position: relative;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: auto;
 }
 
@@ -126,7 +126,7 @@ export default {
   display: flex;
   gap: 1.5rem;
   position: absolute;
-  bottom: -4rem;
+  bottom: -5rem;
   z-index: 20;
 }
 
@@ -166,8 +166,8 @@ export default {
 /* Responsive design */
 @media (max-width: 768px) {
   .header {
-    padding: 8rem 2rem 8rem;
-    margin-top: 3rem;
+    padding: 5rem 2rem 8rem;
+    margin-top: 0;
   }
   
   .header-container {
@@ -214,7 +214,7 @@ export default {
   .social-buttons {
     position: static;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 </style>

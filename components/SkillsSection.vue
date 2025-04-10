@@ -190,6 +190,7 @@
   max-width: 1200px; /* Limit the max width */
   margin: 0 auto; /* Center align the section */
   overflow: hidden; /* Hide overflow */
+  margin-top: 3rem;
 }
 
 .skills h1 {

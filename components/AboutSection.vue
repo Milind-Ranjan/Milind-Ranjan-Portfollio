@@ -1,31 +1,19 @@
 <template>
   <section id="about" class="about-me">
-    <h1>About Me<span class="underline"></span></h1>
-    <div class="info-cards">
-      <div class="card">
-        <i class="fas fa-star"></i>
-        <h4>Interests</h4>
-        <ul class="interests-list">
-          <li>Deep Learning & AI</li>
-          <li>Android Development</li>
-          <li>Competitive Programming</li>
-          <li>Space and Cosmos</li>
-        </ul>
+    <div class="about-container">
+      <div class="illustration-container">
+        <img src="/images/about.png" alt="Developer illustration" class="developer-illustration" />
       </div>
-      <div class="card">
-        <i class="fas fa-graduation-cap"></i>
-        <h4>Education</h4>
-        <ul class="education-list">
-          <li>BTech CSE - VIT</li>
-          <li>Deep Learning - Udemy</li>
-          <li>Android Development - Udemy</li>
-        </ul>
+      <div class="content-container">
+        <h1>About <span class="emphasis">Me</span></h1>
+        <p class="description">
+          I'm Milind Ranjan, a passionate Software Developer with a deep interest in crafting innovative solutions that solve real-world problems. My journey in tech began with a fascination for coding and a drive to continuously learn and evolve in this ever-changing field. With experience in various programming languages and frameworks, I specialize in Android development and Deep Learning. My background includes developing user-friendly web and mobile applications and working on deep learning projects, showcasing my versatility and commitment to technology.
+        </p>
+        <p class="description">
+          When I'm not coding, you'll find me indulging in my hobbies such as singing, exploring space and science, or participating in events that foster creativity and innovation. I'm excited to leverage my skills to build meaningful projects and contribute to impactful solutions.
+        </p>
       </div>
     </div>
-    <p class="description">
-  I&#39;m Milind Ranjan, a passionate Software Developer with a deep interest in crafting innovative solutions that solve real-world problems. My journey in tech began with a fascination for coding and a drive to continuously learn and evolve in this ever-changing field. With experience in various programming languages and frameworks, I specialize in Android development and Deep Learning. My background includes developing user-friendly web and mobile applications and working on deep learning projects, showcasing my versatility and commitment to technology.</p>
-    <p class="hobbies-description">
-    When I&#39;m not coding, you&#39;ll find me indulging in my hobbies such as singing, exploring space and science, or participating in events that foster creativity and innovation. I&#39;m excited to leverage my skills to build meaningful projects and contribute to impactful solutions.    </p>
   </section>
 </template>
 
@@ -36,84 +24,83 @@ export default {
 </script>
 
 <style scoped>
-.card i {
-  font-size: 1.5rem; /* Adjust icon size */
-  color: #050401; /* Change icon color */
-  margin-bottom: 0.25rem; /* Add space below the icon */
-  transition: color 0.3s; /* Smooth color transition on hover */
-}
 .about-me {
-  padding: 0 1rem; /* Add equal padding on left and right */
-  max-width: 1200px; /* Optional: limit the max width to prevent it from being too wide on larger screens */
-  margin: 0 auto; /* Center align the section */
-}
-.hobbies-description {
-  margin-top: 2rem; /* Add spacing above the hobbies description */
-  font-size: 1.1rem; /* Optional: keep it the same size as the previous description */
-  line-height: 1.6;
-  margin-bottom: 5rem; /* Maintain line height for readability */
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.about-me h1 {
-  position: relative;
-  text-align: left;
-  font-size: 2.3rem;
-  margin-bottom: 5rem; /* Remove bottom margin to prevent space between heading and underscore */
-}
-
-.info-cards {
+.about-container {
   display: flex;
-  margin-top: 5rem; /* Add margin-top to increase space above the cards */
-  margin-bottom: 5rem; /* Existing margin */
+  gap: 4rem;
+  align-items: flex-start;
 }
 
-.card {
-  width: 29%; /* Decrease the width to make cards smaller */
-  border: 2px solid black; /* Black border */
-  border-radius: 40px; /* Increase this value for more rounded corners */
-  padding: 1rem; /* Padding inside the card */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-  text-align: center;
-  margin: 0 1rem;
+.illustration-container {
+  flex: 1;
+  max-width: 400px;
+  margin-top: 2rem;
 }
 
-.card h4 {
-  color: #333; /* Dark color for the heading */
+.developer-illustration {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.content-container {
+  flex: 1.5;
+  text-align: left;
+  font-family: 'Sora', sans-serif;
   font-size: 1.5rem;
 }
 
-.interests-list, .education-list {
-  list-style-type: disc; /* Use bullet points */
-  padding-left: 20px; /* Indent list */
-  text-align: left; /* Align text to the left */
-  margin-top: 0.5rem;
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #000;
 }
 
-.card p {
-  margin: 0.2rem 0; /* Add some spacing for paragraphs */
-  color: #515151;
+.emphasis {
+  font-weight: 900;
 }
 
-/* Add space between info cards and description */
-.description { /* Adds spacing between the info cards and the description */
+.description {
   font-size: 1.1rem;
   line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-  .info-cards {
+/* Responsive design */
+@media (max-width: 968px) {
+  .about-container {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
 
-  .card {
-    width: 75%; /* Increase width on mobile for better visibility */
-    margin-bottom: 2rem;
+  .illustration-container {
+    max-width: 300px;
   }
 
+  .content-container {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
   .about-me {
-    padding: 0 1rem; /* Reduce padding on smaller screens */
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
   }
 }
 </style>
