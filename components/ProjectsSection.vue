@@ -83,6 +83,7 @@ export default {
   background-color: #000;
   color: #fff;
   position: relative;
+  font-family: 'Sora', sans-serif;
 }
 
 /* Create full-width background effect */

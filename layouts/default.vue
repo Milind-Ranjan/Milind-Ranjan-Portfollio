@@ -39,7 +39,6 @@ export default {
 
 .hero {
   /* Customize the hero section (header) */
-  background-image: url('/path/to/your/background.jpg'); /* Add an image if needed */
   background-size: cover;
   background-position: center;
 }

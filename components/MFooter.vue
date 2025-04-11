@@ -33,6 +33,7 @@ export default {
   width: 100%;
   bottom: 0;
   margin-top: 3rem;
+  font-family: 'Sora', sans-serif;
 }
 
 .footer-content {
