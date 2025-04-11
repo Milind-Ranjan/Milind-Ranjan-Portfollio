@@ -2,7 +2,11 @@
   <nav class="nav-container" :class="{ 'nav-open': isMenuOpen }">
     <!-- Desktop Menu -->
     <div class="nav-content">
-      <div class="nav-spacer"></div>
+      <div class="home-logo">
+        <a href="#" @click.prevent="scrollToSection('home')">
+          <img src="/icons/home.svg" alt="Home" />
+        </a>
+      </div>
       <ul class="desktop-menu">
         <li v-for="item in menuItems" :key="item">
           <a :href="`#${item.toLowerCase()}`" 
@@ -12,7 +16,18 @@
           </a>
         </li>
       </ul>
-      <a href="#" class="resume-button">Resume <span class="download-icon">↓</span></a>
+      <a href="https://drive.google.com/file/d/1iRPoPUhXHxF0rCFNaByDbBGt1D4aQdU-/view" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="resume-button"
+         @click="trackResumeDownload">
+        Resume 
+        <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+      </a>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -34,6 +49,15 @@
             {{ item }}
           </a>
         </li>
+        <li class="mobile-resume">
+          <a href="https://drive.google.com/file/d/1iRPoPUhXHxF0rCFNaByDbBGt1D4aQdU-/view" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="mobile-resume-button"
+             @click="trackResumeDownload">
+            Resume
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -43,7 +67,7 @@
 import { ref } from 'vue'
 
 const isMenuOpen = ref(false)
-const menuItems = ['About', 'Skills', 'Projects', 'Contact']
+const menuItems = ['About', 'Skills', 'Projects', 'Experience', 'Contact']
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -59,7 +83,17 @@ const scrollToSection = (sectionId) => {
       top: sectionPosition,
       behavior: 'smooth'
     })
+  } else if (sectionId === 'home') {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
+}
+
+const trackResumeDownload = () => {
+  // You can add analytics tracking here if needed
+  console.log('Resume download clicked')
 }
 
 const handleMobileClick = (sectionId) => {
@@ -89,9 +123,30 @@ const handleMobileClick = (sectionId) => {
   justify-content: space-between;
   padding: 0 2.5rem;
 }
+.home-logo img {
+  width: 24px;
+  height: 24px;
+}
+.home-logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.nav-spacer {
-  width: 100px;
+.home-logo a {
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.home-logo a:hover {
+  color: #333333;
+}
+
+.home-logo svg {
+  width: 24px;
+  height: 24px;
 }
 
 .desktop-menu {
@@ -133,7 +188,7 @@ const handleMobileClick = (sectionId) => {
   background-color: #000000;
   color: #ffffff;
   padding: 0.8rem 1.8rem;
-  border-radius: 6px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
@@ -142,20 +197,38 @@ const handleMobileClick = (sectionId) => {
   gap: 0.5rem;
   transition: all 0.3s ease;
   letter-spacing: 0.02em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .resume-button:hover {
   background-color: #333333;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .download-icon {
-  font-size: 1.1rem;
   transition: transform 0.3s ease;
 }
 
 .resume-button:hover .download-icon {
   transform: translateY(2px);
+}
+
+.mobile-resume {
+  margin-top: 1.5rem;
+}
+
+.mobile-resume-button {
+  background-color: #000000;
+  color: #ffffff !important;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
 }
 
 /* Mobile Menu Button */
@@ -246,8 +319,8 @@ const handleMobileClick = (sectionId) => {
     padding: 0 1.5rem;
   }
 
-  .nav-spacer {
-    display: none;
+  .home-logo {
+    margin-left: 0.5rem;
   }
 
   .desktop-menu {

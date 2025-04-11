@@ -1,12 +1,21 @@
 <template>
   <section id="experience" class="experience-section">
+    <div class="side-margin left"></div>
     <div class="container">
       <h1>My <span class="emphasis">Experience</span></h1>
       
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="company-header">
           <div class="company-logo">
             <img src="/images/psypherai.jpeg" alt="Company Logo" />
+          </div>
+          <h2 class="company-name">PsypherAI</h2>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="role-indicator">
+            <div class="role-dot"></div>
+            <div class="role-line"></div>
           </div>
           <div class="timeline-content">
             <div class="job-header">
@@ -22,8 +31,8 @@
         </div>
 
         <div class="timeline-item">
-          <div class="company-logo">
-            <img src="/images/psypherai.jpeg" alt="Company Logo" />
+          <div class="role-indicator">
+            <div class="role-dot"></div>
           </div>
           <div class="timeline-content">
             <div class="job-header">
@@ -39,6 +48,7 @@
         </div>
       </div>
     </div>
+    <div class="side-margin right"></div>
   </section>
 </template>
 
@@ -50,22 +60,75 @@ export default {
 
 <style scoped>
 .experience-section {
-  padding: 5rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 3rem;
+  display: flex;
+  width: 100vw;
+  margin-top: 1rem;
   font-family: 'Sora', sans-serif;
+  background-color: #050401;
+  color: #fff;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.side-margin {
+  background-color: #050401;
+  width: 10%;
+  min-width: 50px;
+  flex-shrink: 0;
+}
+
+.container {
+  padding: 3rem 1rem;
+  width: 80%;
+  max-width: 1200px;
+  flex-grow: 1;
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
+  color: #fff;
 }
 
 .emphasis {
   font-weight: 900;
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.company-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  position: relative;
+  z-index: 1;
+  margin-right: 1.5rem;
+}
+
+.company-logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
 }
 
 .timeline {
@@ -74,90 +137,97 @@ h1 {
   margin: 0 auto;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #000;
-  left: 110px;
-  margin-left: -1px;
-}
-
 .timeline-item {
   display: flex;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   position: relative;
+  padding-left: 30px;
 }
 
-.company-logo {
-  width: 80px;
-  height: 80px;
+.role-indicator {
+  position: relative;
+  margin-right: 1.5rem;
+  width: 20px;
+}
+
+.role-dot {
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #000;
   position: relative;
-  z-index: 1;
-  margin-right: 3.5rem;
+  z-index: 2;
 }
 
-.company-logo img {
-  width: 50px;
-  height: 50px;
+.role-line {
+  position: absolute;
+  top: 14px;
+  left: 7px;
+  width: 2px;
+  bottom: -40px;
+  background: #fff;
+  transform: translateX(-50%);
 }
 
 .timeline-content {
-  background: #fff;
-  border: 2px solid #000;
+  background: #111;
+  border: 2px solid #fff;
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1.2rem;
   flex: 1;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .job-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .job-header h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin: 0;
+  color: #fff;
 }
 
 .date {
-  font-size: 1rem;
-  color: #666;
+  font-size: 0.9rem;
+  color: #aaa;
   font-weight: 500;
 }
 
 .job-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .timeline::before {
-    left: 50px;
+  .side-margin {
+    width: 5%;
+    min-width: 20px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 2.5rem 1rem;
   }
   
   .company-logo {
-    width: 60px;
-    height: 60px;
-    margin-right: 2.5rem;
+    width: 55px;
+    height: 55px;
   }
   
   .company-logo img {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .company-name {
+    font-size: 1.6rem;
   }
   
   .job-header {
@@ -166,25 +236,50 @@ h1 {
   }
   
   .date {
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
   }
 }
 
 @media (max-width: 480px) {
-  .timeline-item {
-    flex-direction: column;
+  .side-margin {
+    width: 2%;
+    min-width: 10px;
+  }
+
+  .container {
+    width: 96%;
+    padding: 2rem 1rem;
   }
   
-  .timeline::before {
-    display: none;
+  .company-header {
+    flex-direction: column;
+    text-align: center;
   }
   
   .company-logo {
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 0.8rem;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  
+  .role-indicator {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    margin-right: 0;
+  }
+  
+  .role-line {
+    display: none;
   }
   
   .timeline-content {
     width: 100%;
+    padding: 1rem;
   }
 }
 </style> 

@@ -1,22 +1,25 @@
 <template>
   <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <div class="project-card" v-for="(project, index) in projects" :key="index">
-        <!-- Replace the image with an SVG icon -->
-        <div class="project-icon">
-          <img :src="project.icon" alt="Project Icon" />
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-row" v-for="(project, index) in projects" :key="index">
+        <div class="project-number">{{ String(index + 1).padStart(2, '0') }}</div>
+        <div class="project-content">
+          <h3 class="project-title">{{ project.name }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-link">
+            <a :href="project.githubLink" target="_blank" rel="noopener noreferrer">
+              <!-- GitHub icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
-        <div class="tech-stack">
-          <h4>Tech Stack:</h4>
-          <ul>
-            <li v-for="(tech, i) in project.techStack" :key="i">{{ tech }}</li>
-          </ul>
-        </div>
-        <div class="project-links">
-          <a :href="project.githubLink" class="btn" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+        <div class="project-image">
+          <img :src="project.image || project.icon" :alt="project.name" />
         </div>
       </div>
     </div>
@@ -32,30 +35,34 @@ export default {
         { 
           name: 'TIC TAC TOE', 
           description: 'Tic Tac Toe game with offline and online modes using game IDs. It includes Firebase for real-time chat and game state management.', 
-          icon: '/icons/tictactoe.jpeg', // Replace with your project SVG icon path
+          icon: '/icons/tictactoe.jpeg',
+          image: '/projects/tictactoe.png', 
           techStack: ['Kotlin', 'Android Studio', 'Firebase'], 
-          githubLink: 'https://github.com/Milind-Ranjan/TicTacToe.git' // Add your GitHub link
+          githubLink: 'https://github.com/Milind-Ranjan/TicTacToe.git'
         },
         { 
           name: 'Bitcoin Predictor', 
           description: 'BitPredictor is a machine learning project that uses TensorFlow and LSTM to predict Bitcoin prices from historical data.', 
-          icon: '/icons/bitcoin.webp', // Replace with your project SVG icon path
+          icon: '/icons/bitcoin.webp',
+          image: '/projects/bitcoin.png',
           techStack: ['Python','Tensorflow','Matplotlib','Deep Learning'],
-          githubLink: 'https://github.com/Milind-Ranjan/BitPredictor.git' // Add your GitHub link
+          githubLink: 'https://github.com/Milind-Ranjan/BitPredictor.git'
         },
         { 
           name: 'Automated Guitar Tuner', 
           description: 'An Arduino-based project that uses a stepper motor and FFT analysis to capture string frequencies and automatically tune a guitar.', 
-          icon: '/icons/guitar.svg', // Replace with your project SVG icon path
+          icon: '/icons/guitar.svg',
+          image: '/projects/guitar.webp',
           techStack: ['Arduino','C++','Micro controller', 'Stepper Motor'],
-          githubLink: 'https://github.com/Milind-Ranjan/Automated-Guitar-Tuner.git' // Add your GitHub link
+          githubLink: 'https://github.com/Milind-Ranjan/Automated-Guitar-Tuner.git'
         },
         { 
           name: 'MusicApp UI', 
-          description: 'MusicApp-UI is a Designed as a UI-only Android app featuring a clean, intuitive interface built with Jetpack Compose. ', 
-          icon: '/icons/music.svg', // Replace with your project SVG icon path
+          description: 'MusicApp-UI is a Designed as a UI-only Android app featuring a clean, intuitive interface built with Jetpack Compose.', 
+          icon: '/icons/music.svg',
+          image: '/projects/musicui.jpg',
           techStack: ['Kotlin','Android Studio','Jetpack Compose','UI'],
-          githubLink: 'https://github.com/Milind-Ranjan/MusicApp-UI.git' // Add your GitHub link
+          githubLink: 'https://github.com/Milind-Ranjan/MusicApp-UI.git'
         }
       ]
     }
@@ -64,126 +71,205 @@ export default {
 </script>
 
 <style scoped>
+/* Full width background solution */
+:deep(body), :deep(html) {
+  background-color: #000;
+}
+
 .projects {
-  padding: 0 1rem; /* Add equal padding on left and right */
-  max-width: 1200px; /* Limit the max width to prevent it from being too wide */
-  margin: 0 auto; /* Center align the section */
-}
-
-.projects h2 {
+  padding: 4rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
   position: relative;
-  text-align: left;
-  margin-top: 5rem;
-  font-size: 2.3rem;
-  margin-bottom: 5rem; /* Space between heading and content */
 }
 
-.project-cards {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  justify-content: space-between; /* Space between cards */
-  padding: 1rem 0; /* Optional padding for aesthetics */
+/* Create full-width background effect */
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background-color: #000;
+  z-index: -1;
 }
 
-.project-card {
-  flex: 0 0 calc(50% - 1rem); /* Two cards in a row with some margin */
-  background-color: #f9f9f9;
-  border: 2px solid black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  border-radius: 40px;
+.section-title {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: 1px;
+}
+
+.projects-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* Ensure the card takes the full available height */
-  margin-bottom: 2rem; /* Space below each card */
+  gap: 4rem;
 }
 
-.project-card img {
-  max-width: 50%; /* Ensure the image fits within the card */
-  height: auto; /* Maintain aspect ratio */
-  border: 2px solid black;
-  border-radius: 50px;
-  margin: 0 auto 1rem; /* Center the image and add space below */
+.project-row {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
 }
 
-.project-card h3 {
-  color: #515151;
-  align-self: center;
-  font-size: 1.5rem;
-  margin: 0.5rem 0; /* Space above and below the heading */
+/* Alternate layout for even projects */
+.project-row:nth-child(even) {
+  grid-template-columns: 0.2fr 1fr 1fr;
+  direction: rtl;
 }
 
-.project-card p {
-  margin: 0.5rem 0; /* Space above and below the description */
-  line-height: 1.5; /* Improve readability of the text */
+.project-row:nth-child(even) .project-content,
+.project-row:nth-child(even) .project-number {
+  direction: ltr;
+}
+
+.project-number {
+  font-size: 8rem;
+  font-weight: 700;
+  opacity: 0.8;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.15);
+  margin-right: 1rem;
   text-align: left;
-  flex-grow: 1; /* Allow description to take up available space */
 }
 
-.project-links {
-  margin-top: 0.25rem; /* Add space above the button */
+.project-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  text-align: left;
 }
 
-.tech-stack h4{
-  margin-bottom: 0.5rem;
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  text-align: left;
 }
 
-.btn {
-  text-align: center;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #050401; /* Button background color */
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 1rem;
-  margin-right: 0.5rem; /* Space between buttons */
-  text-decoration: none;
+.project-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #ffffff;
 }
 
-.btn:hover {
-  background-color: #515151; /* Darker color on hover */
+.project-description {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 90%;
+  font-weight: 300;
+  text-align: left;
 }
 
-.tech-stack {
+.project-link {
   margin-top: 0.5rem;
   text-align: left;
 }
 
-.tech-stack ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  display: flex; 
-  flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
-  gap: 0.5rem; /* Space between tech stack items */
+.project-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
 }
 
-.tech-stack li {
-  margin: 0; /* Remove vertical margins */
-  text-align: left;
-  padding: 0.2rem 0.5rem; /* Add padding around items */
-  background-color: #e3dfdf; /* Background color for tech stack items */
-  border-radius: 5px; /* Rounded corners for each tech item */
+.project-link a:hover {
+  opacity: 0.8;
+}
+
+.project-link svg {
+  width: 22px;
+  height: 22px;
+}
+
+.project-image {
+  overflow: hidden;
+  border-radius: 10px;
+  height: 350px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.05);
 }
 
 /* Media queries for mobile devices */
-@media (max-width: 768px) {
-  .project-card {
-    flex: 0 0 100%; /* Make cards full width on mobile */
-    margin-bottom: 1.5rem; /* Space between stacked cards */
-  }
-  
-  .tech-stack ul {
-    justify-content: center; /* Center align the items */
+@media (max-width: 992px) {
+  .project-row,
+  .project-row:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 1.5rem;
   }
 
-  .tech-stack li {
-    margin-top: 0.5rem; /* Adjust margin for better spacing on smaller screens */
-    padding: 0.3rem 0.6rem; /* Increase padding for readability */
+  .project-number {
+    font-size: 5rem;
+    text-align: left;
+    margin-bottom: -1rem;
+  }
+
+  .project-content {
+    padding: 0;
+  }
+
+  .project-description {
+    max-width: 100%;
+  }
+
+  .project-image {
+    height: 250px;
+    order: -1;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .project-number {
+    font-size: 4rem;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+  }
+
+  .project-image {
+    height: 200px;
   }
 }
 </style>
