@@ -2,9 +2,8 @@
   <header class="header" id="home">
     <div class="header-container">
       <div class="header-content">
-        <h1><span class="light-text">Hello I'm</span> Milind Ranjan.</h1>
+        <h1><span class="light-text">Hello I'm</span> Milind Ranjan</h1>
         <h2 class="profession">Computer Science Student</h2>
-        <h2 class="location"><span class="light-text">Based in</span> India</h2>
         <p class="bio">
           I'm a dedicated Computer Science student with a passion for solving complex problems through clean, 
           efficient code. My focus areas include web development, algorithms, and software engineering.
@@ -101,15 +100,11 @@ export default {
 }
 
 .profession {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 500;
   margin-bottom: 1rem !important;
-}
+  font-family: 'Sora', sans-serif;
 
-.location {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 2rem !important;
 }
 
 .bio {
