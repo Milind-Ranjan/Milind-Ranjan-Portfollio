@@ -183,7 +183,11 @@
     name: 'SkillsSection'
   }
   </script>
-<style scooped>
+<style scoped>
+section {
+  padding: 4rem 1rem;
+  font-family: 'Sora', sans-serif;
+}
 
 .skills {
   padding: 0 1rem; /* Add equal padding on left and right */

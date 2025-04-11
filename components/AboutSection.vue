@@ -38,6 +38,7 @@ export default {
 
 .illustration-container {
   flex: 1;
+  height: 150%;
   max-width: 400px;
   margin-top: 2rem;
 }

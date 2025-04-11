@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import ParticleBackground from '~/components/ParticleBackground.vue'
 import HeaderSection from '~/components/HeaderSection.vue'
 import AboutSection from '~/components/AboutSection.vue'
 import SkillsSection from '~/components/SkillsSection.vue'
