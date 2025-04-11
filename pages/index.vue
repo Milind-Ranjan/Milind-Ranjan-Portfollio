@@ -1,6 +1,5 @@
 <template>
   <div>
-    <ParticleBackground />
     <HeaderSection data-aos="fade-up" />
     <SkillsSection data-aos="fade-left" />
     <ExperienceSection data-aos="fade-right" />
