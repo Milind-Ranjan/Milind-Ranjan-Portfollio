@@ -45,8 +45,10 @@ export default {
 
 .developer-illustration {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
+  margin-top: -90px;
+  margin-right: auto;
+
 }
 
 .content-container {

@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="header-image">
-        <img src="/images/heroMale.png" alt="Milind Ranjan" />
+        <img src="/images/image.png" alt="Milind Ranjan" />
       </div>
     </div>
   </header>
@@ -72,9 +72,10 @@ export default {
 }
 
 .header-image img {
-  max-width: 200%;
-  height: 160%;
-  transform: translateX(-80px);
+  max-width: 100%;
+  height: 100%;
+  margin-top: 150px;
+  margin-left: 200px;
 }
 
 /* Header Text Styles */
@@ -193,12 +194,15 @@ export default {
     margin-top: 2rem;
     transform: none;
     right: auto;
+    display: flex;
+    justify-content: center;
   }
   
   .header-image img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     transform: none;
+    margin-left: 0;
   }
   
   .bio {

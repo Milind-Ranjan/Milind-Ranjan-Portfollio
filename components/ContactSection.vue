@@ -76,7 +76,7 @@
               <span>GitHub</span>
             </a>
             <a 
-              href="https://www.linkedin.com/in/milind-ranjan-0a1621156/" 
+              href="https://www.linkedin.com/in/milind-ranjan-86bba024b/" 
               target="_blank" 
               rel="noopener noreferrer"
               class="social-button linkedin"
@@ -142,7 +142,7 @@ const handleSubmit = async () => {
 <style scoped>
 .contact-section {
   padding: 120px 24px;
-  background-color: #ffffff;
+  background-color: #fffaff;
   overflow: hidden;
   font-family: 'Sora', sans-serif;
 }
@@ -306,7 +306,7 @@ button[type="submit"]:hover {
   letter-spacing: 1px;
   transition: all 0.3s ease;
   min-width: 130px;
-  background-color: #ffffff;
+  background-color: #fffaff;
   color: #000000;
 }
 
@@ -321,7 +321,7 @@ button[type="submit"]:hover {
 }
 
 .social-button.linkedin {
-  background-color: #ffffff;
+  background-color: #fffaff;
   color: #000000;
 }
 
@@ -330,13 +330,13 @@ button[type="submit"]:hover {
 }
 
 .social-button.github {
-  background-color: #ffffff;
+  background-color: #fffaff;
   color: #000000;
   border-color: #000000;
 }
 
 .social-button.resume {
-  background-color: #ffffff;
+  background-color: #fffaff;
   color: #000000;
 }
 
